@@ -30,25 +30,25 @@ const FormComponent: React.FC = () => {
 
   return (
     <div className='w-full h-screen'>
-      <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto pt-32">
+      <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto mt-32 bg-white p-4 rounded-lg shadow-lg shadow-gray-300" >
       <div className="mb-4">
         <label htmlFor="name" className="block mb-1">Nom</label>
-        <input type="text" id="name" {...register('name')} className="w-full border border-gray-300 rounded px-3 py-2" />
+        <input type="text" id="name" {...register('name')} className="w-full border focus:outline-blue-400 border-gray-300 rounded px-3 py-2" />
         {errors.name && <span className="text-red-500">Ce champ est requis</span>}
       </div>
       <div className="mb-4">
         <label htmlFor="email" className="block mb-1">Email</label>
-        <input type="email" id="email" {...register('email')} className="w-full border border-gray-300 rounded px-3 py-2" />
+        <input type="email" id="email" {...register('email')} className="w-full border  focus:outline-blue-400 border-gray-300 rounded px-3 py-2" />
         {errors.email && <span className="text-red-500">Email invalide</span>}
       </div>
       <div className="mb-4">
         <label htmlFor="num" className="block mb-1">Numéro</label>
-        <input type="tel" id="num" {...register('num')} className="w-full border border-gray-300 rounded px-3 py-2" />
+        <input type="tel" id="num" {...register('num')} className="w-full border  focus:outline-blue-400 border-gray-300 rounded px-3 py-2" />
         {errors.num && <span className="text-red-500">Le numéro doit comporter au moins 10 caractères</span>}
       </div>
       <div className="mb-4">
         <label htmlFor="message" className="block mb-1">Message</label>
-        <textarea id="message" {...register('message')} className="w-full border border-gray-300 rounded px-3 py-2"></textarea>
+        <textarea id="message" {...register('message')} className="w-full  focus:outline-blue-400 border border-gray-300 rounded px-3 py-2"></textarea>
         {errors.message && <span className="text-red-500">Ce champ est requis</span>}
       </div>
       <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Envoyer</button>
